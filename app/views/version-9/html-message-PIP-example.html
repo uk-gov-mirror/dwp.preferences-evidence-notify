@@ -1,0 +1,222 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+
+
+  {{ govukOneLoginServiceHeader({
+    homepageLink: "/index.html",
+    signOutLink: " ",
+    oneLoginLink: " ",
+    
+    serviceNavigationParams: { 
+      
+      serviceName: "View your letters messagess",
+      navigationLabel: "inbox.html"
+      
+    }
+  }) }}
+
+
+{% endblock %}
+
+
+{% block pageTitle %}
+Your statement of entitlement
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+      text: "Back",
+      href: "inbox"
+  }) }}
+  
+  <ul class="dwp-language-toggle__list">
+    <li class="dwp-language-toggle__list-item" aria-current="true"> <span class="govuk-body-s"> English  </span></li>
+    <li class="dwp-language-toggle__list-item">    
+    <a href="#" hreflang="cy" lang="cy" rel="alternate" class="govuk-link--no-visited-state" aria-label="Newid yr iaith ir Gymraeg">Cymraeg</a>
+    </li>
+  </ul>
+
+  <div class="govuk-inset-text">
+        <h2 class="govuk-heading-m">If you need this message as a letter, you can download a copy.</h2>
+        <a class="govuk-link govuk-link--no-visited-state" download="PIP_Letter2" href="/public/files/PIP_Letter2.pdf">Download your statement of entitlement (PDF, 4.2 KB)</a>
+      </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    
+    <div class="govuk-grid-column-two-thirds">
+      
+      <div class="mobile-logo">
+          <img src="/public/images/dwp-logo.png" class="dwp-logo" alt=" ">
+          <br>
+          <br>
+        </div>
+
+
+      <span class="govuk-caption-l">Personal Independence Payment (PIP)</span>
+      <h1 class="govuk-heading-l">Your statement of entitlement</h1>
+
+      <p class="govuk-body">Message to Sarah Phillips sent on 1 May 2026</p>
+      
+      <p class="govuk-body">Your reference number: AC222222A</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">    
+      <div class="desktop-logo">
+        <div style ="display: flex; justify-content: flex-end;">
+          <img src="/public/images/DWP-logo.png" class="dwp-logo">
+        </div>
+      </div>
+    </div>
+    
+    <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      
+      <p class="govuk-body">Thank you for asking for a copy of your PIP Statement of Entitlement.</p> 
+      <p class="govuk-body">You have been awarded PIP as follows:</p> 
+      <p class="govuk-body">The standard rate of the mobility component from 2 May 2020 to 2 December 2029.</p> 
+      <p class="govuk-body">The enhanced rate of the daily living component from and including 6 June 2019 for an indefinite period.</p> 
+      <p class="govuk-body">As you have been awarded PIP you may be able to get other benefits and services. You can use this message as evidence that you have been awarded PIP.</p>
+      <p class="govuk-body">To find out more, view <a href="#" class="https://www.gov.uk/">financial help if you're disabled</a>.</p> 
+
+      <h2 class="govuk-heading-m">Report changes to your circumstances</h2>
+      <p class="govuk-body">You must contact us if your circumstances change as they could affect your benefits. Find out what you need to let us know in the change of circumstances section under more information.</p> 
+     
+      <h2 class="govuk-heading-m" id="contact-us">If you need to contact us</h2>
+      <p class="govuk-body">You can contact us by telephone on 0800 555 0001. If you contact us, we may ask you for:</p> 
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your reference number - this is AC2222A</li>
+        <li>the ID of this message - this is PIP.053</li>
+      </ul>
+
+      <h2 class="govuk-heading-m" id="contact-us">If you need to show your proof of benefit</h2>
+      <p class="govuk-body">You can download a copy of your proof of benefit at the top of this page. This includes your address.</p> 
+
+
+      <br>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="next-steps-and-support">More information</h2>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+       
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Change of circumstances
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">{Section content}</p> 
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Other ways to communicate with us
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">{Section content}</p>
+        </div>
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Treating people fairly
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">{Section content}</p>
+          </div>
+        </div> 
+        
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Call charges
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">{Section content}</p> 
+          </div>
+        </div> 
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Why DWP needs personal information and how we treat it
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">{Section content}</p> 
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .dwp-logo {
+      width: 135px;
+      height: auto;
+      display: block;
+      filter: grayscale(100%)
+    }
+
+    .mobile-logo {
+      display: none;
+    }
+
+    .desktop-logo {
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      .mobile-logo {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .mobile-logo .dwp-logo {
+        width: 90px;
+      }
+
+      .desktop-logo {
+        display: none;
+      }
+    }
+  </style>
+
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+
+    const navType = performance.getEntriesByType('navigation')[0]?.type;
+    if (navType === 'reload') {
+      localStorage.clear();
+    }
+
+    });
+  </script>
+
+{% endblock %}
+
+

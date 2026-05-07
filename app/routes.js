@@ -8,6 +8,40 @@ const router = govukPrototypeKit.requests.setupRouter();
 
 // Add your routes here
 
+// Retired prototype redirect
+router.use((req, res, next) => {
+  const allowedFolders = [
+    '/evidence/'
+  ]
+
+  const ignoredPaths = [
+    '/public/',
+    '/assets/',
+    '/manage-prototype',
+    '/clear-data'
+  ]
+
+  const isHomepage =
+    req.path === '/' || req.path === '/index'
+
+  const isAllowedFolder =
+    allowedFolders.some(folder =>
+      req.path.startsWith(folder)
+    )
+
+  const isIgnored =
+    ignoredPaths.some(path =>
+      req.path.startsWith(path)
+    )
+
+  if (isHomepage || isAllowedFolder || isIgnored) {
+    return next()
+  }
+
+  res.redirect('/')
+})
+
+
 // PEN routes
 
 //Message centre routes
